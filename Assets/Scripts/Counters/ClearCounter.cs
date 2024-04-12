@@ -5,7 +5,7 @@ using UnityEngine;
 public class ClearCounter : BaseCounter
 {
     //[SerializeField] private Transform counterTopPoint;
-    [SerializeField] private KitchenObjectSO kitchenObjectSO;
+    //[SerializeField] private KitchenObjectSO kitchenObjectSO;
     //private KitchenObject kitchenObject;
 
     public override void Intersect(Player player)

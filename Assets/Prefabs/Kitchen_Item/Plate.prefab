@@ -167,6 +167,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8104365237108183967}
   - component: {fileID: 6981929003888279794}
+  - component: {fileID: 287713538527440131}
+  - component: {fileID: -6524066363625012198}
+  - component: {fileID: 6172053722829906446}
   m_Layer: 0
   m_Name: Plate
   m_TagString: Untagged
@@ -211,6 +214,63 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 432d9c9d9c8f4374d9fc2e70880dc62f, type: 2}
   - {fileID: 11400000, guid: d1a22b118ac7b7d468608aad8ced1541, type: 2}
   - {fileID: 11400000, guid: 12e7e19629cbabd4c8cf8206cd2a8821, type: 2}
+--- !u!114 &287713538527440131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3600329812327593517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 158639473, guid: e725a070cec140c4caffb81624c8c787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SyncScale: 1
+  SyncParent: 1
+  _autoAOIOverride: 1
+  DisableSharedModeInterpolation: 0
+--- !u!114 &-6524066363625012198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3600329812327593517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1552182283, guid: e725a070cec140c4caffb81624c8c787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SortKey: 284615465
+  ObjectInterest: 1
+  Flags: 262145
+  NestedObjects: []
+  NetworkedBehaviours:
+  - {fileID: 287713538527440131}
+  - {fileID: 6172053722829906446}
+--- !u!114 &6172053722829906446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3600329812327593517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e342733e246af39468b80dee5dde38e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kitchenObjectSO: {fileID: 11400000, guid: 726c4bc9d85f7ea44aee4fb1765c83a2, type: 2}
+  kitchenObjectSOList: []
+  enableKitchenObjectSOList:
+  - {fileID: 11400000, guid: 3efce5ff6d09a234d86a3c1f5eb8c9bb, type: 2}
+  - {fileID: 11400000, guid: f03b3beb880b6b3448e31b5d0eba2276, type: 2}
+  - {fileID: 11400000, guid: 432d9c9d9c8f4374d9fc2e70880dc62f, type: 2}
+  - {fileID: 11400000, guid: 12e7e19629cbabd4c8cf8206cd2a8821, type: 2}
+  - {fileID: 11400000, guid: d1a22b118ac7b7d468608aad8ced1541, type: 2}
+  plateCompleteVisual: {fileID: 6078758533820891233}
+  kitchenObjectDic: {fileID: 11400000, guid: b20154dfb6ad125469e5065bc4a5ae5d, type: 2}
 --- !u!1001 &1823935304609974530
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -579,32 +639,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3812876574508226177, guid: c0c9afd619b40914a8f625c0535e2284,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 9194070692958452681}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0c9afd619b40914a8f625c0535e2284, type: 3}
---- !u!1 &8320166688379313820 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3812876574508226177, guid: c0c9afd619b40914a8f625c0535e2284,
-    type: 3}
-  m_PrefabInstance: {fileID: 5160320941936052253}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &9194070692958452681
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8320166688379313820}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd3d876203412eb47ae8a1f934077265, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  plateKitchenObject: {fileID: 6981929003888279794}
-  kitchenObjectSOGameObjectList: []
 --- !u!4 &8320166688379313821 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3812876574508226176, guid: c0c9afd619b40914a8f625c0535e2284,

@@ -16,6 +16,7 @@ public class ContainCounterVisual : MonoBehaviour
 
     private void Start()
     {
+        if (!containCounter) return;
         containCounter.OnPlayerGrabbedObject += ContainCounter_OnPlayerGrabbedObject;
     }
 

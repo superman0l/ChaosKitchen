@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using FusionHelpers;
 
 public class DeliveryManagerUI : MonoBehaviour
 {
@@ -19,13 +20,30 @@ public class DeliveryManagerUI : MonoBehaviour
     {
         foreach (Transform child in container)
         {
-            Destroy(child.gameObject);
+            //Destroy(child.gameObject);
+            child.GetComponent<DeliveryManagerSingleUI>().DestroySelf();
         }
         foreach (RecipeSO recipeSO in DeliveryManager.Instance.getManagerList())
         {
-            Transform recipeTransform = Instantiate(recipeTemplate, container);
-            recipeTransform.GetComponent<DeliveryManagerSingleUI>().SetRecipeTitle(recipeSO.recipeName);
-            recipeTransform.GetComponent<DeliveryManagerSingleUI>().SetKitchenObjectUI(recipeSO.kitchenObjectSOList);
+            DeliveryManagerSingleUI deliveryManagerSingleUI = LocalObjectPool.Acquire(recipeTemplate.GetComponent<DeliveryManagerSingleUI>(), Vector3.zero, Quaternion.identity, container);
+            //Transform recipeTransform = Instantiate(recipeTemplate, container);
+            deliveryManagerSingleUI.SetRecipeTitle(recipeSO.recipeName);
+            deliveryManagerSingleUI.SetKitchenObjectUI(recipeSO.kitchenObjectSOList);
+        }
+    }
+
+    public void UpdateRecipeUI(List<RecipeSO> recipeSOList)
+    {
+        foreach (Transform child in container)
+        {
+            Destroy(child.gameObject);
+        }
+        foreach (RecipeSO recipeSO in recipeSOList)
+        {
+            DeliveryManagerSingleUI deliveryManagerSingleUI = LocalObjectPool.Acquire(recipeTemplate.GetComponent<DeliveryManagerSingleUI>(), Vector3.zero, Quaternion.identity,  container);
+            //Transform recipeTransform = Instantiate(recipeTemplate, container);
+            deliveryManagerSingleUI.SetRecipeTitle(recipeSO.recipeName);
+            deliveryManagerSingleUI.SetKitchenObjectUI(recipeSO.kitchenObjectSOList);
         }
     }
 }

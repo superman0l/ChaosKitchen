@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dedb24a459f759439010994843be72b, type: 3}
   m_Name: MEGBurger
   m_EditorClassIdentifier: 
+  id: 3
   kitchenObjectSOList:
   - {fileID: 11400000, guid: 3efce5ff6d09a234d86a3c1f5eb8c9bb, type: 2}
   - {fileID: 11400000, guid: d1a22b118ac7b7d468608aad8ced1541, type: 2}

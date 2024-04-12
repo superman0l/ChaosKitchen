@@ -30,4 +30,6 @@ public class ProgressBar : BaseUI
         else Hide();
         barImage.fillAmount = e.progressNormalized;
     }
+
+    
 }

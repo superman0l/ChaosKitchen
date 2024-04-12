@@ -9,6 +9,7 @@ public class SelectedCounterVisual : MonoBehaviour
 
     private void Start()
     {
+        if (!Player.Instance) return;
         Player.Instance.OnSelectedCounterChanged += Player_OnSelectedCounterChanged;
     }
 
@@ -24,12 +25,12 @@ public class SelectedCounterVisual : MonoBehaviour
         }
     }
 
-    private void show()
+    public void show()
     {
         visualGameObject.SetActive(true);
     }
 
-    private void hide()
+    public void hide()
     {
         visualGameObject.SetActive(false);
     }

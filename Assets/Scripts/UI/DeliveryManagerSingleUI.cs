@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using FusionHelpers;
 
 public class DeliveryManagerSingleUI : MonoBehaviour
 {
@@ -18,8 +19,14 @@ public class DeliveryManagerSingleUI : MonoBehaviour
     {
         foreach (KitchenObjectSO kitchenObjectSO in list)
         {
-            Transform addIconTemplate = Instantiate(iconTemplate, iconContainer);
-            addIconTemplate.GetComponent<IconTemplateUI>().SetIconUI(kitchenObjectSO);
+            IconTemplateUI iconTemplateUI = LocalObjectPool.Acquire(iconTemplate.GetComponent<IconTemplateUI>(), Vector3.zero, Quaternion.identity, iconContainer);
+            // Transform addIconTemplate = Instantiate(iconTemplate, iconContainer);
+            iconTemplateUI.SetIconUI(kitchenObjectSO);
         }
+    }
+
+    public void DestroySelf()
+    {
+        LocalObjectPool.Release(this);
     }
 }

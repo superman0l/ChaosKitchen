@@ -30,4 +30,15 @@ public class PlateCompleteVisual : MonoBehaviour
             }
         }
     }
+
+    public void AddPlateKitchenObject(KitchenObjectSO kitchenObjectSO)
+    {
+        foreach (KitchenObjectSO_GameObject kitchenObjectSOGameObject in kitchenObjectSOGameObjectList)
+        {
+            if (kitchenObjectSOGameObject.kitchenObjectSO == kitchenObjectSO)
+            {
+                kitchenObjectSOGameObject.gameObject.SetActive(true);
+            }
+        }
+    }
 }

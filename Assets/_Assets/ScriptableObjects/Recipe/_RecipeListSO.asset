@@ -17,3 +17,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 618024c6710a9a24da4a90734ce909a3, type: 2}
   - {fileID: 11400000, guid: 42f37432ee4292841bf357e015260390, type: 2}
   - {fileID: 11400000, guid: c0440b41f23750249be3e54c1c3a8891, type: 2}
+  dicItems:
+  - id: 1
+    recipeSO: {fileID: 11400000, guid: 8f5050e49f8a7b849968ebdb0602e754, type: 2}
+  - id: 2
+    recipeSO: {fileID: 11400000, guid: 618024c6710a9a24da4a90734ce909a3, type: 2}
+  - id: 3
+    recipeSO: {fileID: 11400000, guid: 42f37432ee4292841bf357e015260390, type: 2}
+  - id: 4
+    recipeSO: {fileID: 11400000, guid: c0440b41f23750249be3e54c1c3a8891, type: 2}

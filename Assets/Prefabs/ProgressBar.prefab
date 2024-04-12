@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 5838947356763264200}
   - component: {fileID: 6530613525212982774}
   - component: {fileID: 5655614276115583499}
+  - component: {fileID: -5415588311623175542}
+  - component: {fileID: -5305865811501373497}
   m_Layer: 5
   m_Name: ProgressBar
   m_TagString: Untagged
@@ -87,7 +89,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &5838947356763264200
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132,6 +134,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mode: 2
+--- !u!114 &-5415588311623175542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3370465589606277292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3c450dbbfc20894aa7bc7211dc6718d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  barImage: {fileID: 8108718822707020181}
+--- !u!114 &-5305865811501373497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3370465589606277292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1552182283, guid: e725a070cec140c4caffb81624c8c787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SortKey: 796718644
+  ObjectInterest: 1
+  Flags: 262145
+  NestedObjects: []
+  NetworkedBehaviours:
+  - {fileID: -5415588311623175542}
 --- !u!1 &3960198697237627400
 GameObject:
   m_ObjectHideFlags: 0
@@ -217,7 +250,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &8403773982238407115
 MonoBehaviour:
   m_ObjectHideFlags: 0
